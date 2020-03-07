@@ -1,3 +1,4 @@
+:restart
 echo off
 title bruno
 cls
@@ -9,6 +10,7 @@ echo le nombre aleatiore est %Nba%
 
 :question
 set /p Nb= votre nombre ?
+set /a nc= nc+1
 
 if  %Nb% LSS %Nba% goto :pp
 if  %Nb% GTR %Nba% goto :pg
@@ -24,4 +26,6 @@ goto :question
 
 :win
 echo valeur de Nb %Nb% vous avez ganger
+echo nombre de tentatives %nc%
 pause
+goto :restart
